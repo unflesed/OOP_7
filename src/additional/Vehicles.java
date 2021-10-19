@@ -19,6 +19,6 @@ public enum Vehicles {
 
     public static void main(String[] args) {
         Vehicles vehicle = Vehicles.BMW;
-        System.out.println(BMW);
+        System.out.println(vehicle);
     }
 }
