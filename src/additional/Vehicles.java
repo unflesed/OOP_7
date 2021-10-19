@@ -1,15 +1,24 @@
 package additional;
 
 public enum Vehicles {
-    BMW(1000), AUDI(1100);
+    BMW(1000){
+        @Override
+        String getColor() {
+            return "Black";
+        }
+    },
+    AUDI(1100){
+        @Override
+        String getColor() {
+            return "Silver";
+        }
+    };
     double price;
     String color = "Black";
     Vehicles(double price){
        this.price = price;
     }
-    String getColor(){
-        return color;
-    }
+    abstract String getColor();
     @Override
     public String toString() {
         return this.name() +
